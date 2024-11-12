@@ -1,9 +1,7 @@
 <?php
 
-declare(strict_type = 1);
+require_once '../Transaction.php';
 
-phpinfo();
+$transaction = new Transaction();
 
-echo '<pre>';
-print_r($_SERVER);
-echo '</pre>';
+var_dump($transaction);
