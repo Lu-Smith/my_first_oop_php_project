@@ -10,4 +10,4 @@ $transaction->addTax(rate: 8);
 
 $transaction->applyDiscount(rate: 10);
 
-var_dump(value: $transaction->amount);
+var_dump(value: $transaction->getAmount());
