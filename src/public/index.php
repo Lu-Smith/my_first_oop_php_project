@@ -4,10 +4,9 @@ declare(strict_types=1);
 
 require_once '../Transaction.php';
 
-$transaction = new Transaction(amount: 100, description: 'Transaction 1');
+$amount = (new Transaction(amount: 100, description: 'Transaction 1'))
+->addTax(rate: 8)
+->applyDiscount(rate: 10)
+->getAmount();
 
-$transaction->addTax(rate: 8);
-
-$transaction->applyDiscount(rate: 10);
-
-var_dump(value: $transaction->getAmount());
+var_dump(value: $amount);
