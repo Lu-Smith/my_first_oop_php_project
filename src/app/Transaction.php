@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace App;
+
 class Transaction
 {
   private float $amount = 15;
