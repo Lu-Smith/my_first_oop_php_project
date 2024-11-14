@@ -6,6 +6,10 @@ namespace App;
 
 class Transaction
 {
+
+  public const STATUS_PAID = "paid";
+  public const STATUS_UNPAID = "unpaid";
+  public const STATUS_PENDING = "pending";
   private float $amount = 15;
   private string $description;
 
