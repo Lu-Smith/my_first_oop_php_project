@@ -4,18 +4,29 @@ declare(strict_types=1);
 
 namespace App;
 
+use App\Enum\Status;
+
 class Transaction
 {
 
-  public const STATUS_PAID = "paid";
-  public const STATUS_UNPAID = "unpaid";
-  public const STATUS_PENDING = "pending";
+  private string $status;
   private float $amount = 15;
   private string $description;
 
   public function __construct(float $amount, string $description) {
+    $this->setStatus(Status::PENDING);
     $this->amount = $amount;
     $this->description = $description;
+  }
+
+  public function setStatus(string $status): self {
+    if(! isset(Status::ALL_STATUSES[$status])) {
+      throw new \InvalidArgumentException('Invalid status');
+    }
+
+    $this->status = $status;
+
+    return $this;
   }
 
   public function addTax(float $rate): Transaction

@@ -7,7 +7,10 @@ use App\Transaction;
 
 require __DIR__ . '/../vendor/autoload.php';
 
-echo Status::STATUS_PAID;
+$transaction = new Transaction(100,'Sample Transaction');
+$transaction->setStatus(Status::PENDING);
+
+var_dump($transaction);
 
 // $transaction1 = (new App\Transaction(amount: 100, description: 'Transaction 1'))
 // ->addTax(rate: 8)
