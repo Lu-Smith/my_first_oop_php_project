@@ -55,6 +55,7 @@ class ComposerStaticInit7422faf8f33d1f1cdfca8767e0ffc0f4
     );
 
     public static $classMap = array (
+        'App\\Enum\\Status' => __DIR__ . '/../..' . '/app/Enum/Status.php',
         'App\\Transaction' => __DIR__ . '/../..' . '/app/Transaction.php',
         'Brick\\Math\\BigDecimal' => __DIR__ . '/..' . '/brick/math/src/BigDecimal.php',
         'Brick\\Math\\BigInteger' => __DIR__ . '/..' . '/brick/math/src/BigInteger.php',

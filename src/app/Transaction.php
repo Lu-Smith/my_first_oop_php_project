@@ -8,15 +8,15 @@ use App\Enum\Status;
 
 class Transaction
 {
-
+  public static int $count = 0;
   private string $status;
-  private float $amount = 15;
-  private string $description;
 
-  public function __construct(float $amount, string $description) {
+  public function __construct(
+    public float $amount, 
+    public string $description) 
+  {
     $this->setStatus(Status::PENDING);
-    $this->amount = $amount;
-    $this->description = $description;
+    self::$count++;
   }
 
   public function setStatus(string $status): self {

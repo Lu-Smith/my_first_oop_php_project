@@ -8,9 +8,13 @@ use App\Transaction;
 require __DIR__ . '/../vendor/autoload.php';
 
 $transaction = new Transaction(100,'Sample Transaction');
-$transaction->setStatus(Status::PENDING);
+$transaction = new Transaction(100,'Sample Transaction');
+$transaction = new Transaction(100,'Sample Transaction');
+$transaction = new Transaction(100,'Sample Transaction');
+$transaction = new Transaction(100,'Sample Transaction');
 
-var_dump($transaction);
+
+var_dump(Transaction::$count);
 
 // $transaction1 = (new App\Transaction(amount: 100, description: 'Transaction 1'))
 // ->addTax(rate: 8)
